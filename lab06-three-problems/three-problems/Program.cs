@@ -10,7 +10,7 @@
 
 Random rng = new Random(4000);
 int choice;
-
+// the entire do while statement for pretty much everything 
 do
 {
     System.Console.WriteLine("");
@@ -24,12 +24,15 @@ do
 
     choice = Convert.ToInt32(Console.ReadLine());
 
+// the loop for if its less than or more than 5 
+
     while (choice < 1 || choice > 5)
     {
         System.Console.WriteLine("Choose a number from 1 to 5.");
         System.Console.Write("Pick 1 through 5: ");
        choice = Convert.ToInt32(Console.ReadLine());
     } 
+    // for first choice to tell what grade is its letter grade
 
     if (choice == 1 || choice == 4)
     {
@@ -44,6 +47,7 @@ do
             {
                 System.Console.WriteLine("Score must be a number between 0 and 100.");
             }
+            // gives out the letter grade
 
         } while (score < 0 || score > 100);
         if (score >= 93 && score <= 100)
@@ -69,6 +73,8 @@ do
 
 
     }
+
+    //for if you chose 2 will roll dice
     if (choice == 2 || choice == 4)
     {
         string rollAgain;
@@ -82,6 +88,7 @@ do
             int total = roll1 + roll2;
             string specialTotal = "";
 
+// gives something its special attribute at the end if it needs it
             if (roll1 == roll2)
             {
                 specialTotal = "Doubles!";
@@ -107,6 +114,8 @@ do
         System.Console.WriteLine($"You rolled {rollnum} times and won {winnum}");
         //I hope this is acceptable for it instead of using tolower on it and also not adding anything extra for if its n or not because either way it exits the program for me, if it is not add a comment to me to let me know to do more detail in future
     }
+
+    // for if you chose 3 to get the 5 scores 
     if (choice == 3 || choice == 4)
     {
         System.Console.WriteLine("=== The Score Report ===");
@@ -120,7 +129,7 @@ do
     double total = 0;
     int highestScore = scores[0];
     int passingScores = 0;
-    
+    // to find the highest score and how many are passing
     foreach (int score in scores)
         {
             total += score;
